@@ -8,4 +8,12 @@ describe "#caesar_cipher" do
   it "wraps from z to a" do 
     expect(caesar_cipher('xyz',1)).to eql('yza')
   end
+
+  it "keeps the correct case of letter positions" do
+    expect(caesar_cipher('AbCd',1)).to eql('BcDe')
+  end
+
+  it "includes punctuation" do
+    expect(caesar_cipher('!?AB',1)).to eql('!?BC')
+  end
 end
