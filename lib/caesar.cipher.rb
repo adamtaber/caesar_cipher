@@ -15,5 +15,3 @@ def caesar_cipher(string, key)
   end
   output_value.join
 end
-
-p caesar_cipher('Zhis is a Test!', 2)
